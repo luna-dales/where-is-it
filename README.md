@@ -5,6 +5,16 @@
 
 Traditional grocery store directories may identify an aisle, but they rarely tell shoppers exactly where a product is located within that aisle. WhereIsIt addresses this problem by combining artificial intelligence, crowdsourced shelf photographs, and accessible navigation tools.
 
+## Screenshots
+
+The following screenshots demonstrate the product-search
+workflow in WhereIsIt.
+
+| Find Product | Search Result | Product Location |
+|:---:|:---:|:---:|
+| <img src="docs/screenshots/find-product.png" width="250" alt="WhereIsIt product search screen"> | <img src="docs/screenshots/found-product.png" width="250" alt="Product search result with location information"> | <img src="docs/screenshots/product-location.jpg" width="250" alt="Shelf photograph showing the product location"> |
+| Search for a grocery product | Find its aisle and shelf | View its location in a shelf photograph |
+
 ## How It Works
 
 WhereIsIt has two primary workflows:
