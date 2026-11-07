@@ -21,3 +21,6 @@ __pycache__/
 *.p12
 *.mobileprovision
 Secrets.xcconfig
+
+# Supabase CLI temporary files
+supabase/.temp/
