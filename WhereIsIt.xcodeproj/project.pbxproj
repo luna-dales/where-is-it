@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6028FE07307E8DC400FEA0DC /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 6028FE06307E8DC400FEA0DC /* Auth */; };
+		6028FE09307E8DC400FEA0DC /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 6028FE08307E8DC400FEA0DC /* Functions */; };
+		6028FE0E307E8E9E00FEA0DC /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 6028FE0D307E8E9E00FEA0DC /* Supabase */; };
+		6028FE14307FD0FE00FEA0DC /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 6028FE13307FD0FE00FEA0DC /* PostgREST */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		6028FDE9307E855D00FEA0DC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +59,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6028FE14307FD0FE00FEA0DC /* PostgREST in Frameworks */,
+				6028FE09307E8DC400FEA0DC /* Functions in Frameworks */,
+				6028FE07307E8DC400FEA0DC /* Auth in Frameworks */,
+				6028FE0E307E8E9E00FEA0DC /* Supabase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +89,7 @@
 				6028FDDA307E855B00FEA0DC /* WhereIsIt */,
 				6028FDEB307E855D00FEA0DC /* WhereIsItTests */,
 				6028FDF5307E855D00FEA0DC /* WhereIsItUITests */,
+				6028FE0C307E8E9E00FEA0DC /* Frameworks */,
 				6028FDD9307E855B00FEA0DC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +102,13 @@
 				6028FDF2307E855D00FEA0DC /* WhereIsItUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		6028FE0C307E8E9E00FEA0DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +131,10 @@
 			);
 			name = WhereIsIt;
 			packageProductDependencies = (
+				6028FE06307E8DC400FEA0DC /* Auth */,
+				6028FE08307E8DC400FEA0DC /* Functions */,
+				6028FE0D307E8E9E00FEA0DC /* Supabase */,
+				6028FE13307FD0FE00FEA0DC /* PostgREST */,
 			);
 			productName = WhereIsIt;
 			productReference = 6028FDD8307E855B00FEA0DC /* WhereIsIt.app */;
@@ -195,6 +218,9 @@
 			);
 			mainGroup = 6028FDCF307E855B00FEA0DC;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				6028FE05307E8DC400FEA0DC /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 6028FDD9307E855B00FEA0DC /* Products */;
 			projectDirPath = "";
@@ -396,8 +422,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WhereIsIt/Preview Content\"";
+				DEVELOPMENT_TEAM = CHY8FPSZ7L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "WhereIsIt uses your camera to photograph store shelves and identify product locations.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "WhereIsIt uses your microphone to search for grocery products by voice.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "WhereIsIt converts spoken product names into text so you can search for them.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -424,8 +454,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WhereIsIt/Preview Content\"";
+				DEVELOPMENT_TEAM = CHY8FPSZ7L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "WhereIsIt uses your camera to photograph store shelves and identify product locations.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "WhereIsIt uses your microphone to search for grocery products by voice.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "WhereIsIt converts spoken product names into text so you can search for them.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -552,6 +586,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6028FE05307E8DC400FEA0DC /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6028FE06307E8DC400FEA0DC /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6028FE05307E8DC400FEA0DC /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		6028FE08307E8DC400FEA0DC /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6028FE05307E8DC400FEA0DC /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		6028FE0D307E8E9E00FEA0DC /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6028FE05307E8DC400FEA0DC /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+		6028FE13307FD0FE00FEA0DC /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6028FE05307E8DC400FEA0DC /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6028FDD0307E855B00FEA0DC /* Project object */;
 }
